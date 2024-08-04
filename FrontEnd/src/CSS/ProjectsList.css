@@ -1,0 +1,75 @@
+.projectsList-Box{
+    width: 95%;
+    /* height: 20vh; */
+    margin: 10vh auto;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5em auto;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+.projetcList-header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.projectList-title{
+/* position: absolute; */
+width: 275px;
+height: 86px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 73.4109px;
+line-height: 86px;
+color: #7E22CE;
+}
+
+
+.projectsList-createProject{
+    position: relative;
+width: 23em;
+height: 4em;
+color: white;
+background: #211935;
+border-radius: 8.50935px;
+cursor: pointer;
+}
+
+.projectsList-plus{
+
+position: absolute;
+left: 8%;
+top: 21.05%;
+bottom: 75.53%;
+
+    /* border: 1px solid blue; */
+}
+
+.projectList-createproject-text{
+
+position: absolute;
+width: 10em;
+height: 2em;
+left: 2.5em;
+top: 2.5vh;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 1.9em;
+line-height: 1.3em;
+/* identical to box height */
+
+color: #F8F8F8;
+
+
+}

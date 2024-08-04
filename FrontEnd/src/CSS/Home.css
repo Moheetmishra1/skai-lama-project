@@ -1,0 +1,229 @@
+body{
+    background-color: white;
+}
+
+.home-navbar{
+    height: 10vh;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 3%;
+}
+
+.logo{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 2%;
+    /* border: 2px solid black; */
+    position: relative;
+}
+
+.home-logo-design{
+
+/* position: absolute; */
+width: 60%;
+height: 150%;
+left: 30px;
+top: 29px;
+/* border: 1px solid black; */
+}
+
+
+
+.home-logo-name{
+    /* LAMA. */ 
+
+/* position: absolute; */
+width: 80%;
+height: 60%;
+margin-top: -4%;
+/* left: 79.63px;
+top: 29px; */
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 260%;
+line-height: 48px;
+
+color: #7E22CE;
+/* border: 2px solid green; */
+
+
+}
+
+
+
+.home-setting{
+    width: 12%;
+    height: 20px;
+    padding-top: 4%;
+
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+}
+
+
+.home-setting-icon , .home-notification-icon{
+
+height: 3em;
+
+
+
+}
+
+
+
+.home-back-to-home{
+  /* Rectangle 11 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 198.69px;
+height: 41px;
+left: 185px;
+top: 12vh;
+
+background: #FFFFFF;
+border: 0.750318px solid #999999;
+box-shadow: 12.0051px 24.0102px 10.5044px rgba(0, 0, 0, 0.01), 6.75286px 13.5057px 9.00381px rgba(0, 0, 0, 0.03), 3.00127px 6.00254px 6.75286px rgba(0, 0, 0, 0.05), 0.750318px 1.50064px 3.75159px rgba(0, 0, 0, 0.06), 0px 0px 0px rgba(0, 0, 0, 0.06);
+border-radius: 35.3231px;
+
+
+}
+
+
+
+.home-to-homeIcon{
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 14.58%;
+bottom: 14.58%;
+
+
+}
+
+
+
+
+.home-back-to-homeText{
+
+width: 132px;
+height: 25px;
+margin-left: 25%;
+margin-top: 5%;
+
+left: 234.2px;
+top: 149.2px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20.9989px;
+line-height: 25px;
+
+color: #3C3C3C;
+
+}
+
+
+.home-new-intro-box{
+   
+height: 80vh;
+width: 80vw;
+margin: 30px auto;
+left: calc(50% - 1495px/2 - 0.5px);
+top: calc(50% - 773.92px/2 + 13.96px);
+position: relative;
+}
+
+
+
+
+.home-create-a-new-project-text{
+
+position: absolute;
+width: 794px;
+height: 86px;
+left: calc(50% - 694px/2 - 1px);
+top: 1vh;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 73.4109px;
+line-height: 86px;
+color: #7E22CE;
+}
+
+.home-talk{
+width: 40%;
+height: 40%;
+margin: 15vh 20vw;
+
+}
+
+
+.home-create-a-new-project-lorem{
+ 
+width: 99%;
+left: calc(50% - 1495px/2 - 0.5px);
+    margin-top: -5%;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 41px;
+text-align: center;
+color: #838383;
+}
+
+
+.home-inside-create-project{
+   
+margin: 2px auto;
+width: 25rem;
+height: 5rem;
+display: flex;
+align-items: center;
+gap: 1px;
+justify-content: space-evenly;
+background: #211935;
+border-radius: 12.89px;
+}
+
+
+
+.home-create-project-text{
+
+height: 54px;
+
+padding-top: 4px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 2rem;
+line-height: 54px;
+background-color: transparent;
+border: none    ;
+color: #F8F8F8;
+}
+
+
+
+.home-create-project-plus{
+   
+left: 36.76%;
+right: 60.33%;
+top: 79.61%;
+bottom: 15.21%;
+height: 3em;
+
+}

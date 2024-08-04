@@ -1,0 +1,67 @@
+.projectSection-menu{
+    height: 100vh;
+    border-left: 1px solid black;
+
+    /* Navigation Drawer
+
+Navigation drawers provide access to destinations and app functionality, such as switching accounts. They can either be permanently on-screen or opened and closed by a navigation menu icon.
+
+Navigation drawers are recommended for apps with 5 or more top-level destinations, apps with 2 or more levels of navigation hierarchy, quick navigation between unrelated destinations, or replacing the navigation rail or navigation bar on large screens.
+
+🛠 Additional options 
+Nav Item - Can be edited by selecting individual item and  selecting style, states, icons, and metadata from the variant properties. 
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 15.9px;
+
+position: absolute;
+width: 477px;
+height: 1253px;
+left: 0px;
+top: 0px;
+
+background: #F3E8FF;
+border-radius: 0px 21.2px 21.2px 0px;
+
+    
+}
+
+.projectsection-logo{
+    display: flex;
+}
+
+.projectSection-logo-icon{
+    /* Iconsax/Bulk/directright */
+
+/* position: absolute; */
+width: 52.84px;
+height: 52.84px;
+left: 30px;
+top: 81.84px;
+
+
+}
+.projectsection-logo-text{
+    /* LAMA. */
+
+position: relative;
+width: 134.37px;
+height: 54.35px;
+left: 10px;
+top: 5px;
+margin-left: 2px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 37.7432px;
+line-height: 48px;
+
+color: #7E22CE;
+
+
+}

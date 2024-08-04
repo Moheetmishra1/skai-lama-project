@@ -1,0 +1,76 @@
+
+.project-Box{
+    
+width: 430px;
+height: 150px;
+border-radius: 18px;
+padding: 5px;
+display: grid;
+grid-template-columns: 1fr 2fr;
+align-items: center;
+gap:4px;
+box-sizing: border-box;
+border: 1px solid black;
+
+}
+
+.project-Box-item{
+    height: 135px;
+    padding-top: 25px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.project-Box-Episode{
+ 
+width: 78px;
+height: 19px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 15.8186px;
+line-height: 19px;
+color: #3C3C3C;
+}
+
+.project-Box-Name{
+
+width: 130px;
+
+height: 124px;
+color: white;
+font-size: 55px;
+font-weight: 700;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 18.2122px;
+box-sizing: border-box;
+border: 1px solid black;
+}
+
+.project-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.3098px;
+    line-height: 30px;
+    color: #7E22CE;
+    word-wrap: break-word;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 30px;
+    display: block; /* add display: block */
+  }
+.project-Box-text{
+width: 162px;
+height: 19px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 15.8186px;
+line-height: 19px;
+color: #969696;
+}
