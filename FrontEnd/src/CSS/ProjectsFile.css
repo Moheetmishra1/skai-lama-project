@@ -1,0 +1,54 @@
+
+.projects-files{
+    /* Rectangle 11 */
+
+box-sizing: border-box;
+
+/* position: absolute; */
+width: 300px;
+height: 130px;
+left: 542px;
+top: 307px;
+
+background: #ffffff;
+border: 1px solid #999999;
+box-shadow: 16px 32px 14px rgba(0, 0, 0, 0.01), 9px 18px 12px rgba(0, 0, 0, 0.03), 4px 8px 9px rgba(0, 0, 0, 0.05), 1px 2px 5px rgba(0, 0, 0, 0.06), 0px 0px 0px rgba(0, 0, 0, 0.06);
+border-radius: 22px;
+
+display: grid;
+grid-template-columns: 1fr 2fr;
+
+}
+
+
+
+.projects-files-text{
+    /* Upload from RSS Feed */
+/*  */
+/* position: absolute; */
+width: 150px;
+height: 67px;
+left: 1599px;
+top: 523px;
+margin-left: 10px;
+margin-top: 30px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 33px;
+/* or 124% */
+letter-spacing: 0.190306px;
+
+color: #3C3C3C;
+
+
+}
+
+.projectFile-pic{
+    height: 70px;
+    width: 70px;
+    margin: 22px 1px 2px 19px;
+    border-radius: 50%;
+    border: 1px solid black;
+}

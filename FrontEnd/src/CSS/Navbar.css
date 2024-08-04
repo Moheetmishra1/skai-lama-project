@@ -1,32 +1,37 @@
 .navbarBox{
     padding: 5px;
     height: 55px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 8fr 3fr;
     justify-content: space-around;
+    grid-template-rows: 60px 40px;
+    gap: 2px;
     font-size: 25px;
     font-weight: 700;
-    border: 1px solid black;
-    align-items: center;
+    /* border: 1px solid black; */
+    /* align-items: center; */
+    margin-top: 10px;
 }
 
-.projectsNavabr-end{
-    display: flex;
-    gap:2px;
-    align-items: center;
-}
+
 .navbar-part1{
     display: flex;
     gap: 2px;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid black; */
+
 }
 
-
-
-
+.navbar-part1 svg{
+    height: 30px;
+}
+.navbar-part1 p{
+    font-size: 20px;
+    margin-top: 46px;
+    margin-left: -2px;
+}
 .projects-url{
-    /* / Sample Project / Upload */
-
 width: 392px;
 height: 46px;
 margin-top: 30px;
@@ -34,37 +39,68 @@ font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
 font-size: 32.1757px;
-/* line-height: 46px; */
-/* identical to box height, or 143% */
 letter-spacing: 0.229826px;
-border: 1px solid black;
 color: #999999;
-
-
 }
 
+
+
+
+
+
+
+.projectsNavabr-end{
+    display: flex;
+    gap: 4px;
+    margin-top: 14px;
+    align-items: center;
+    margin-right: 65px;
+    /* border: 1px solid black; */
+}
+
+.projectsection-navbar-arraow{
+    font-size: 15px;
+    width: 40px;
+}
+
+
 .projects-en{
-    /* EN */
-
 width: 42px;
-height: 38px;
-left: 1621px;
-top: 73px;
-
+height: 30px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
-font-size: 32.5px;
+font-size: 18px;
 line-height: 38px;
 /* identical to box height */
-
 color: #1E1E1E;
-
-
 }
+
+
+.projects-notification{
+    margin-left:10px ;
+}
+
 .projects-notification >svg{
     height: 35px;
-border: 1px solid black;
+/* border: 1px solid black; */
+}
 
+.navbar-flga-img{
+    /* Ellipse 2 */
 
+position: absolute;
+width: 60px;
+height: 60px;
+left: 1682px;
+top: 62px;
+
+background: url("../../public/Images/download.png");
+
+}
+
+.projectsection-logo-flag{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
 }
