@@ -1,8 +1,9 @@
 .projectSectionBox{
-
+width: 100%;
     display: grid;
-    grid-template-columns: 2fr 5fr;
-    background: #FFFFFF;
+    grid-template-columns: 2fr 8fr;
+    /* background: #bb2424; */
+    height: 100vh;
 
 
 }

@@ -5,41 +5,66 @@
     justify-content: space-around;
     font-size: 25px;
     font-weight: 700;
+    border: 1px solid black;
     align-items: center;
 }
-.navbarBox a{
-    text-decoration: none;
 
-}
-
-.logoutIcon{
-    height: 40px;
+.projectsNavabr-end{
     display: flex;
-    gap: 10px;
+    gap:2px;
     align-items: center;
-   
 }
-.logoutIcon >button{
-    height: 38px;
-    width: 100px;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: rgb(240, 47, 95);
-    color: white;
-    border: none;
+.navbar-part1{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
 }
 
-.navbarBox>a:visited{
-    color: white;
-}
-.navbarBox a:hover{
-    color: aqua;
+
+
+
+.projects-url{
+    /* / Sample Project / Upload */
+
+width: 392px;
+height: 46px;
+margin-top: 30px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 32.1757px;
+/* line-height: 46px; */
+/* identical to box height, or 143% */
+letter-spacing: 0.229826px;
+border: 1px solid black;
+color: #999999;
+
+
 }
 
-.navbarBox a:active{
-    color: black;
+.projects-en{
+    /* EN */
+
+width: 42px;
+height: 38px;
+left: 1621px;
+top: 73px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32.5px;
+line-height: 38px;
+/* identical to box height */
+
+color: #1E1E1E;
+
+
 }
-.navbarBox a::selection{
-    color: yellow;
-    background-color: black;
+.projects-notification >svg{
+    height: 35px;
+border: 1px solid black;
+
+
 }

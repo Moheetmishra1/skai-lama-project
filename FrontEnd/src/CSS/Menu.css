@@ -2,27 +2,12 @@
     height: 100vh;
     border-left: 1px solid black;
 
-    /* Navigation Drawer
-
-Navigation drawers provide access to destinations and app functionality, such as switching accounts. They can either be permanently on-screen or opened and closed by a navigation menu icon.
-
-Navigation drawers are recommended for apps with 5 or more top-level destinations, apps with 2 or more levels of navigation hierarchy, quick navigation between unrelated destinations, or replacing the navigation rail or navigation bar on large screens.
-
-🛠 Additional options 
-Nav Item - Can be edited by selecting individual item and  selecting style, states, icons, and metadata from the variant properties. 
-*/
-
-/* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 15.9px;
-
-position: absolute;
-width: 477px;
-height: 1253px;
-left: 0px;
-top: 0px;
+padding-top: 15px;
+margin: 0px  8px 2px 2px;
 
 background: #F3E8FF;
 border-radius: 0px 21.2px 21.2px 0px;
@@ -32,12 +17,17 @@ border-radius: 0px 21.2px 21.2px 0px;
 
 .projectsection-logo{
     display: flex;
+  
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
 }
 
 .projectSection-logo-icon{
-    /* Iconsax/Bulk/directright */
-
-/* position: absolute; */
+  
 width: 52.84px;
 height: 52.84px;
 left: 30px;
@@ -46,8 +36,6 @@ top: 81.84px;
 
 }
 .projectsection-logo-text{
-    /* LAMA. */
-
 position: relative;
 width: 134.37px;
 height: 54.35px;
@@ -60,8 +48,169 @@ font-style: normal;
 font-weight: 800;
 font-size: 37.7432px;
 line-height: 48px;
-
 color: #7E22CE;
+}
+
+
+.projectsection-header1{
+ 
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 23.85px 21.2px;
+gap: 13.25px;
+
+width: 245.2px;
+height: 60px;
+
+border-radius: 132.5px;
+
+flex: none;
+/* order: 1; */
+align-self: stretch;
+flex-grow: 0;
 
 
 }
+.projectsection-header-text{
+  
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.9px;
+width: 178px;
+height: 27px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.projectsection-header1-text p{
+width: 248px;
+height: 27px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18.55px;
+line-height: 26px;
+letter-spacing: 0.1325px;
+
+color: #49454F;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+
+.projectsection-menu-header2{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    
+}
+
+
+
+.projection-menu-header2-last{
+
+width: 124.5px;
+height: 27px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 18.55px;
+line-height: 26px;
+margin: 10px auto;
+
+letter-spacing: 0.1325px;
+padding-top: 5px;
+color:black;
+
+flex: none;
+order: 1;
+flex-grow: 1;
+}
+.projectsection-menu-header2:visited, .projectsection-menu-header2:active{
+    color: black;
+}
+
+.projectsection-menu-header2-icon{
+
+width: 31.8px;
+height: 31.8px;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+color: white;
+background-color: rgb(110, 107, 107);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.projectsection-menu-header2-icon div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.projectsection-menu-header2-l1{
+  
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 21.2px 31.8px 21.2px 21.2px;
+gap: 15.9px;
+
+width: 350.2px;
+height: 60px;
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+}
+
+.projectdection-menu-header2{
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15.9px;
+
+width: 445.2px;
+height: 74.2px;
+border-radius: 132.5px;
+margin: 8px 2px;
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.active{
+    background-color: #7E22CE;
+    
+}
+.active .projectsection-menu-header2-icon{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+
