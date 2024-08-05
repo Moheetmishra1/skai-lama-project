@@ -6,9 +6,7 @@ box-sizing: border-box;
 
 /* position: absolute; */
 width: 300px;
-height: 130px;
-left: 542px;
-top: 307px;
+height: 118px;
 
 background: #ffffff;
 border: 1px solid #999999;
@@ -17,16 +15,15 @@ border-radius: 22px;
 
 display: grid;
 grid-template-columns: 1fr 2fr;
+/* gap:34px; */
+/* gap: 30px; */
 
 }
 
 
 
 .projects-files-text{
-    /* Upload from RSS Feed */
-/*  */
-/* position: absolute; */
-width: 150px;
+width: 158px;
 height: 67px;
 left: 1599px;
 top: 523px;
@@ -37,10 +34,9 @@ font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 33px;
-/* or 124% */
 letter-spacing: 0.190306px;
 
-color: #3C3C3C;
+color: black;
 
 
 }
@@ -50,5 +46,5 @@ color: #3C3C3C;
     width: 70px;
     margin: 22px 1px 2px 19px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: none;
 }

@@ -273,10 +273,8 @@ function Signup() {
 
   
   let sendDetails = async (e) => {
-    console.log(e.target);
 
     e.preventDefault();
-    console.log(e.target.value);
     
     try {
       if (!user.first || !user.email || !user.mobile || !user.dob || !user.gender || !user.password || !user.confirmPassword) {
@@ -286,7 +284,6 @@ function Signup() {
 
       let err = nameCheck(user.first) || emailCheck(user.email) || numberCheck(user.mobile)
         || passwordCheck(user.password) || passwordCheck(user.confirmPassword) || !user.dob || !user.gender;
-      console.log(nameCheck(user.first));
       if (err) {
         if (err === true) {
           errorMessage.current.innerHTML = "D.o.B and Gender are Mandatory.";

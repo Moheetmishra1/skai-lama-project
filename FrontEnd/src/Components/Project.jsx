@@ -15,13 +15,16 @@ function Project({name}) {
 
     const moveToProject = async ()=>{
 
+
+
+      navToProjectSection(`/projectsection/${name}`)
     }
 
   
 
   return (
     <div>
-        <div className="project-Box"  onClick={()=>{navToProjectSection("/projectsection")}}>
+        <div className="project-Box"  onClick={moveToProject}>
 
             <div className="project-Box-Name" style={{backgroundColor: colors[Math.floor(Math.random()*3)]  }} > 
                     <p>{sp}</p>

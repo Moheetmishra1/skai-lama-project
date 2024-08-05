@@ -4,13 +4,6 @@
 
 
 .projects-upload-title{
-    /* Upload */
-
-/* position: absolute;
-width: 174px;
-height: 64px;
-left: calc(50% - 174px/2 - 326px);
-top: 177px; */
 
 font-family: 'Roboto';
 font-style: normal;
@@ -19,16 +12,12 @@ font-size: 50px;
 line-height: 64px;
 margin-top: 60px;
 margin-left: 10px;
-/* display: inline; */
-
 color: #7E22CE;
-
-
 }
 
 .projects-fileList{
     margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
+    gap:10px;
 }

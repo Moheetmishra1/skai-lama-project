@@ -11,7 +11,6 @@ function ProjectsList({lists, updateProjectName}) {
 
 
 
-console.log("rendering projectlist",projects);
 
   return (
     <div style={{display:lists!="none"?"grid":"none"}} className='projectsList-Box'>

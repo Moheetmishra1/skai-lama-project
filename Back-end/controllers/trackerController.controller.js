@@ -53,50 +53,9 @@ const refreshLogin = async (req,res)=>{
 
 
 
-// const createAccount = async (req,res,next)=>{
-//     let {first,last,email,mobile,password,confirmPassword,dob,gender} = req.body;
-//     const image = req.file;  
-//     let err  = nameCheck(first)|| (last && nameCheck(last))|| emailCheck(email)|| numberCheck(mobile) ||passwordCheck(password)
-    
-//     if(err){
-//       return  res.json({error:true,message:err})
-//     }
-//     err= passwordCheck(confirmPassword);
-//     if(err){
-//       return  res.json({error:true,message:("Confirm "+ err)})
-//     }
-//     if(password !== confirmPassword){
-//        return res.json({error:true,message:"Password and confirm password are not matching."})
-//     }
-//     first= first.trim()
-//     last=last && last.trim()
-//     email=email.trim()
-//     password= password.trim()
-//     confirmPassword= confirmPassword.trim()
-//     gender= gender.trim()
-//     dob= dob.trim()
-//         console.log("it is reading?");
-
-//         let user= await userSchema.findOne({$or:[{email},{mobile}]});
-//         console.log("email in createfile",user);
-//         if(user){
-//             return res.status(200).json({error:true,message:"Mobile or email already exist."})
-//         }
-//         const hash= await encryptPassword(password)    
-//         user = await userSchema.create({first,last, password:hash,email,mobile,dob,gender,image: {
-//             data: image.buffer,
-//             contentType: image.mimetype,
-//           }})
-//         res.json({error:false,message:"User's account created."})
-//         subscription(email)
-// }
-
-
-
 const createAccount = async (req, res, next) => {
     let { first, last, email, mobile, password, confirmPassword, dob, gender } = req.body;
     const image = req.file;
-    console.log("Image is ", image);
     
   
     let err = nameCheck(first) || (last && nameCheck(last)) || emailCheck(email) || numberCheck(mobile) || passwordCheck(password);
@@ -122,10 +81,8 @@ const createAccount = async (req, res, next) => {
     gender = gender.trim();
     dob = dob.trim();
   
-    console.log("it is reading?");
   
     let user = await userSchema.findOne({ $or: [{ email }, { mobile }] });
-    console.log("email in createfile", user);
     if (user) {
       return res.status(200).json({ error: true, message: "Mobile or email already exist." });
     }

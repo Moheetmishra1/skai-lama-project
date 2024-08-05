@@ -22,7 +22,7 @@ function App() {
       <Route path="/" element= {<Authentication><Suspense fallback={<h1>Loading.........</h1>}> <LazyHome /></Suspense></Authentication> }/>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} /> 
-      <Route path="/projectsection" element={<Authentication><Suspense fallback={<h1>Loading.........</h1>} ><LazyProjectSection/></Suspense></Authentication>} >
+      <Route path="/projectsection/:projectname" element={<Authentication><Suspense fallback={<h1>Loading.........</h1>} ><LazyProjectSection/></Suspense></Authentication>} >
               <Route index element={<Projects />} />
               <Route path="projects" element={<Projects />} />
               <Route path="widgetconfigurartions" element={<h1>w</h1>} />
@@ -33,7 +33,7 @@ function App() {
       <Route path='*' element={<h1 style={{color:"red"}}> Page not found....</h1>}/>
      </Routes>
      </BrowserRouter>
-    
+    {/*  */}
 
     </>
   )

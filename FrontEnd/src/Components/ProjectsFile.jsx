@@ -1,16 +1,21 @@
 import React from 'react'
 import "../CSS/ProjectsFile.css"
 
-function ProjectsFile() {
-  return (
-    <div className="projects-files">
-      <div className="projectFile-pic">
+function ProjectsFile({fileName,profileImage}) {
 
+  const createFile = async ()=>{
+    
+  }
+
+
+  return (
+    <div className="projects-files" onClick={createFile}>
+      <div className="projectFile-pic">
+        <img src={profileImage}  height="65px" width="65px" alt="image not found" />
       </div>
       <div className="projects-file-details">
 
-        <div className="projects-files-text">Upload from
-        RSS Feed</div>
+        <div className="projects-files-text"> {fileName}</div>
       </div>
                         </div>
   )

@@ -3,7 +3,7 @@ const {loginToAccount,createAccount, refreshLogin} = require("../controllers/tra
 const auth = require("../helper/Autho");
 const { loginAuth } = require("./loginAuth");
 const multer = require('multer');
-const { uploadProject, Allprojects } = require("../controllers/projectSchema.controller");
+const { uploadProject, Allprojects, userprojectdetail } = require("../controllers/projectSchema.controller");
 
 
 const storage = multer.diskStorage({
@@ -29,7 +29,7 @@ router.get("/refreshlogin",loginAuth,refreshLogin);
 
 router.post("/uploadproject",auth,uploadProject)
 router.get("/userprojects",auth,Allprojects)
-
+router.get(`/getuserproject/:projectname`,auth,userprojectdetail)
 
 
 module.exports= router

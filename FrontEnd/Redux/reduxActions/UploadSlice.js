@@ -1,9 +1,13 @@
 let UploadSlice = (estate,action)=>{
-    estate.pDetail=action.payload
+    estate.pDetails=action.payload
 }
 
 let UpdateProjects = (estate,action)=>{
     estate.projects = action.payload;
 }
 
-export {UpdateProjects,UploadSlice}
+const UploadFiles= (estate,action)=>{
+    estate.allFiles=action.payload
+}
+
+export {UpdateProjects,UploadSlice,UploadFiles}

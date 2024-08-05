@@ -10,7 +10,6 @@ let transport = createTransport({
 
   
 let subscription = async (email)=>{
-    console.log(email);
     let sendmail = await transport.sendMail({
         from: "moheetmishra.gaya@gmail.com",
         to: email,
