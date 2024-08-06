@@ -42,6 +42,44 @@ const userprojectdetail = async(req,res,next)=>{
     }
 }
 
+const CreateFile = async (req,res,next)=>{
+
+    try{
+        let {pid} = req.params;
+        let {projectFileName,fileName,descripton} = req.body;
+        let obj = await ProjectSchema.findById(pid)
+       
+
+        
 
 
-module.exports = {uploadProject,Allprojects,userprojectdetail}
+        // objFile.fileList.push({fileName,descripton})
+        
+        
+        if(obj){
+            let index= obj.files.findIndex(a=> { return a.fileName===projectFileName}) 
+            if(index>=0){
+                 obj.files[index].fileList.push({fileName,descripton})
+                let d= await ProjectSchema.findByIdAndUpdate(pid, obj)
+
+                console.log(d ,"  check it ");
+
+
+                res.status(201).json({error:false,message:"File is created"})
+
+            }else{
+                res.status(201).json({error:true,message:"File name is not avaiable"})
+
+            }
+        }else{
+                res.status(201).json({error:true,message:"Project name is not avaiable"})
+        }
+        
+
+    }catch(err){
+        next(err)
+    }
+}
+
+
+module.exports = {uploadProject,Allprojects,userprojectdetail,CreateFile}

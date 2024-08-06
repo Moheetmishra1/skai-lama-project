@@ -28,7 +28,8 @@ function Login() {
 
   async function sendDetails(e) {
     e.preventDefault();
-
+    console.log("Enter to login pag send data function");
+    
     loginError.current.innerHTML = "";
     loginError.current.style = "color:red";
 

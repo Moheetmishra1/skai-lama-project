@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../CSS/ProjectsFile.css"
+import { useCustomCreateFileContext } from '../Helper/context'
+import ProjectsCreateFile from './Projects/ProjectsCreateFile'
+import { CreateFileContext } from './Projects'
 
 function ProjectsFile({fileName,profileImage}) {
+  let {ProjectsCreateFile,setPCF}= useContext(CreateFileContext)
+  // let {setPCF} = useCustomCreateFileContext()
 
-  const createFile = async ()=>{
-    
-  }
+
 
 
   return (
-    <div className="projects-files" onClick={createFile}>
+    <div className="projects-files" onClick={()=>{setPCF({...ProjectsCreateFile,image:profileImage,fileName,display:"block"})}}>
+
+
       <div className="projectFile-pic">
         <img src={profileImage}  height="65px" width="65px" alt="image not found" />
       </div>
