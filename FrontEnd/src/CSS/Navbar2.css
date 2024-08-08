@@ -1,0 +1,28 @@
+.wideget-navbar-Box{
+    margin: 50px 0px 5px 10px;
+    
+}
+
+.widget-navber2-links{
+    display: flex;
+    gap: 2em;
+    /* height: 2px; */
+}
+
+
+.widgetConfiguration-navbar{
+
+height: 35px;
+left: calc(50% - 97px/2 - 195.5px);
+top: 312px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 2em;
+/* line-height: 35px; */
+
+color: #3C3C3C;
+
+}
+

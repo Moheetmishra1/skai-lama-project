@@ -28,7 +28,7 @@ const loginToAccount = async (req,res,next)=>{
         let check =  await decryptPassword(password,obj.password) 
         
         let token = jwt.sign({userId:obj._id,email:obj.email,first:obj.first,last: obj.last},process.env.Auth_Secret_Key,{expiresIn:"1h"})       
-        check ?   res.status(200).json({error:false,message:"Authentication matched.",token,data:{email:obj.email,first:obj.first,last:obj.last,category:obj.category}}) :   res.status(200).json({error:true,message:"Password is incorrect."});
+        check ?   res.status(200).json({error:false,message:"Authentication matched.",token,data:{email:obj.email,first:obj.first,last:obj.last,category:obj.category,image}}) :   res.status(200).json({error:true,message:"Password is incorrect."});
 
     }else{
         res.status(201).json({error:true,message:"Username not exist."})}

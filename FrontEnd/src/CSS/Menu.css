@@ -1,5 +1,5 @@
 .projectSection-menu{
-    height: 140vh;
+    /* height: 99vh; */
     border-left: 1px solid black;
 
 display: flex;
@@ -200,11 +200,11 @@ flex-grow: 0;
 
 }
 
-.active{
+projectSection-menu .active{
     background-color: #7E22CE;
     
 }
-.active .projectsection-menu-header2-icon{
+projectSection-menu .active .projectsection-menu-header2-icon{
     background-color: black;
 }
 
@@ -214,3 +214,29 @@ a{
 }
 
 
+
+.menu-bottom-setting{
+    position: absolute;
+    height: 2em;
+    bottom: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1em    ;
+    border: 1px solid transparent;
+background: #F3E8FF;
+
+}
+
+
+
+.menu-setting-icon{
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(123, 121, 121);
+    background-color: rgb(230, 226, 226);
+}

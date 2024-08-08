@@ -1,0 +1,67 @@
+.widgetgeneral-Box{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1.5em;
+}
+
+.widgetgeneral-title{
+    
+/* width: 194px; */
+/* height: 3; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 1.5em;
+/* line-height: 35px; */
+
+color: #3C3C3C;
+
+
+}
+
+/* .widgetgeneral-Box>div{
+    border: 1px solid black;
+} */
+
+.widgetgeneral-input{
+    /* Rectangle 61 */
+
+box-sizing: border-box;
+
+/* position: absolute; */
+width: 100%;
+height: 3em;
+
+
+background: #FFFFFF;
+/* border: 1px solid #999999; */
+border-radius: 9px;
+
+}
+
+.widgetgeneral-Box-span{
+    height: 2em;
+    font-size: 0.8em;
+    /* background-color: black; */
+    /* Lorem ipsuim dolor sit Lorem ipsuim dolor sit */
+/* 
+position: absolute;
+width: 323px;
+height: 19px;
+left: calc(50% - 323px/2 - 246.5px);
+top: 534px; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+margin: 4px;
+color: #646464;
+
+
+}
