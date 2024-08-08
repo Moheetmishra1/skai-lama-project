@@ -1,0 +1,95 @@
+.projectsTranscript-Box{
+    /* margin-top: 20px; */
+    padding:  30px 30px;
+}
+
+
+
+.projectTranscript-desc-Box{
+    /* Rectangle 8 */
+
+/* position: absolute; */
+width: 100%;
+height: 60vh;
+left: 554px;
+top: 292px;
+margin-top: 40px;
+border: 2px solid #7E22CE;
+border-radius: 20px;
+
+}
+
+.projectsTranscript-editbutton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectsTranscript-delete-edit{
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    
+}
+
+  .projectsTranscript-delete-edit>button{
+box-sizing: border-box;
+
+    width: 7em;
+height: 2.5em;
+border-radius: 8.50935px;
+
+}
+.projectsTranscript-discard{
+
+background: #FFFFFF;
+border: 2px solid #FF274C;
+
+}
+.projectsTranscript-save{
+    background-color: #3C3C3C;
+    color:white;
+}
+
+.projectTranscript-desc-header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.projectTranscript-editButton{
+  /* Button
+
+Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like Dialogs, Modal windows, Forms, Cards and Toolbars
+
+Filled buttons are high-emphasis buttons.
+They have the most visual impact after the FAB, and should be used for important, final actions that complete a flow, like &quot;Save&quot;, &quot;Join now&quot;, or &quot;Confirm&quot;.
+*/
+
+/* Auto layout */
+display: flex;
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 9.11px;
+
+/* position: absolute; */
+width: 8em;
+height: 2.2em;
+
+background: #3C3C3C;
+/* M3/Elevation Light/1 */
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+border-radius: 113.912px;
+/* display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: center; */
+color: white;
+
+}
+
+.projectsTranscript-desc{
+    padding: 5px;
+}

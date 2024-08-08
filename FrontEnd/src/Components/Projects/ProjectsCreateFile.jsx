@@ -1,20 +1,29 @@
 import React, { useContext, useRef, useState } from 'react'
 import "../../CSS/ProjectsCreateFile.css"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios';
+import { logout, uploadFileofFileList } from '../../../Redux/React_Slice/expense.reduxSlice';
 
 function ProjectsCreateFile({projectCreateFileState,setPCF }) {
     let {pDetails} = useSelector(store=>store.cart);
-    let [fileObject,setFileObject] = useState({fileName:"",descripton:""})
+    let [fileObject,setFileObject] = useState({fileName:"",description:""})
     let fileNameRef= useRef()
     let descriptionRef= useRef()
-    
+    const dispact = useDispatch()
+    const err= useRef()
+
     function updateFileObject({target:{value,name}}){
+        err.current.style.innerHTML=""
+
         setFileObject({...fileObject,[name]:value})
     }
    
     const saveFile = async()=>{
-        console.log(projectCreateFileState," file name");
+        err.current.style.color="red"
+        if( !fileObject.fileName || ! fileObject.description){
+            err.current.innerHTML="All fields are mandatory."
+            return 
+        }
 
         try{
                 let {data} = await axios.post(`http://localhost:4044/api/v1/createfile/${pDetails._id}`,{...fileObject,projectFileName:projectCreateFileState.fileName}
@@ -23,16 +32,27 @@ function ProjectsCreateFile({projectCreateFileState,setPCF }) {
                         Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`
                     },
                 })
+                if(!data.error){
+                   setPCF({...projectCreateFileState,display:"none"})
+                   dispact(uploadFileofFileList(data.data))
+
+
+                }else{
+                    if(data.message==="jwt expired" ||data.message==="jwt malformed"){
+                        sessionStorage.clear()
+                        dispact(logout())
+
+                    }
+                }
                 console.log(data);
                 
         }catch(err){
             console.log(err);
             
         }
-        console.log("File description data ",fileObject);
-        setPCF({...projectCreateFileState,display:"none"})
         fileNameRef.current.value=""
         descriptionRef.current.value=""
+        err.current.innerHTML=""
 
     }
     
@@ -48,10 +68,10 @@ function ProjectsCreateFile({projectCreateFileState,setPCF }) {
                     <div className='projects-createFile-part1-text'>Upload from {projectCreateFileState.fileName}</div>
                 </div>
                 <button className='projects-createFiles-cross' onClick={()=>{setPCF({...projectCreateFileState,display:"none"})}}> 
-                    ×
+                    x
                 </button>
             </div>  
-
+                <span className="projectsCreateError" ref={err} style={{color:"red",height:"5px"}}></span>
             <div className='projects-createFiles-part2'>
                 <label  for="projects-name" className='projects-name'>Name</label>
                 <input type="text" id='projects-name' className='projects-createFile-inputName' style={{fontSize:"35px  "}} ref={fileNameRef} name="fileName"  onChange={updateFileObject} />
@@ -59,7 +79,7 @@ function ProjectsCreateFile({projectCreateFileState,setPCF }) {
 
             <div className='projects-createFiles-part2'>
                 <label  for="projects-desc" className='projects-name'>Description</label>
-                <input type="text" id='projects-desc' className='projects-createFile-inputName' ref={descriptionRef}  style={{fontSize:"35px"}}name="descripton" onChange={updateFileObject} />
+                <input type="text" id='projects-desc' className='projects-createFile-inputName' ref={descriptionRef}  style={{fontSize:"35px"}}name="description" onChange={updateFileObject} />
             </div>
 
             {/* <div className='projects-createFiles-part3'></div> */}

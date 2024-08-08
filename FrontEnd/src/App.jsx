@@ -6,6 +6,7 @@ import Signup from './Components/Pages/Signup'
 import Authentication from './Components/Authentication'
 import React, { Suspense } from 'react'
 import Projects from './Components/Projects.jsx'
+import ProjectsTranscript from './Components/Projects/ProjectsTranscript.jsx'
 
 //^ LazyLoad Component
 let LazyProjectSection= React.lazy(()=>import("./Components/ProjectSection.jsx"))
@@ -26,7 +27,7 @@ function App() {
               <Route index element={<Projects />} />
               <Route path="projects" element={<Projects />} />
               <Route path="widgetconfigurartions" element={<h1>w</h1>} />
-      
+              <Route path="transcript/:projectfilename/:index" element={<ProjectsTranscript />} />
       
               </Route>
               {/* <Route path="/projectsection/projects" element={<Projects />} /> */}

@@ -26,11 +26,11 @@ function CreateAccount({vale,updateProject,displaytList}) {
                       Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`,
                     },}  )
             if(data.error){
-                if(data.message==="jwt expired"){
+                
+                if(data.message==="jwt expired" || data.message==="jwt malformed"){
                         dispatch(logout())
                         sessionStorage.clear()
                 }
-            console.log(data);
             }else{
                 dispatch(updateProjects(data.data))
                 displaytList()

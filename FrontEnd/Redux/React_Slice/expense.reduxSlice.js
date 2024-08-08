@@ -1,12 +1,13 @@
 import {createSlice}  from "@reduxjs/toolkit"
 import { Login,  Logout } from "../reduxActions/signupLoginActions"
-import {UploadSlice,UpdateProjects,UploadFiles} from "../reduxActions/UploadSlice"
+import {UploadSlice,UpdateProjects,UploadFiles,UploadFileofFileList, UpdateDescription} from "../reduxActions/UploadSlice"
 
 const initialState= {
     islogin:null,
     pDetails:{},
     projects:[],
-    allFiles:[]
+    allFiles:[],
+   singleProjectFileList:[]
 }
 
 const expenseSlice=  createSlice({
@@ -17,11 +18,13 @@ const expenseSlice=  createSlice({
         logout:Logout,
         uploaduserproject:UploadSlice,
         updateProjects:UpdateProjects,
-        uploadFiles:UploadFiles
+        uploadFiles:UploadFiles,
+        uploadFileofFileList:UploadFileofFileList,
+        updateDescription:UpdateDescription
     }
 })
 
 
 
 export default expenseSlice.reducer
- export let  {login,logout,uploaduserproject,updateProjects,uploadFiles}  = expenseSlice.actions
+ export let  {login,logout,uploaduserproject,updateProjects,uploadFiles, uploadFileofFileList,updateDescription}  = expenseSlice.actions

@@ -12,7 +12,8 @@ function ProjectsFile({fileName,profileImage}) {
 
 
   return (
-    <div className="projects-files" onClick={()=>{setPCF({...ProjectsCreateFile,image:profileImage,fileName,display:"block"})}}>
+    <div className="projects-files" onClick={()=>{
+     setPCF({...ProjectsCreateFile,image:profileImage,fileName,display:"block"})}}>
 
 
       <div className="projectFile-pic">

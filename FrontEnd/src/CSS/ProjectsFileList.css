@@ -1,6 +1,8 @@
 .projectsFilesList{
-    width: 85%;
-    padding: 15px;
+    height: 40vh;
+    width: 100%;
+    margin: 25px auto;
+    padding: 5px;
     border: 1px solid black;
 }
 
@@ -9,11 +11,8 @@
 
 box-sizing: border-box;
 
-position: absolute;
-width: 1296px;
+width: 100%;
 height: 95px;
-left: 542px;
-top: 428px;
 
 background: #7E22CE;
 border: 0.719424px solid #59CE22;
@@ -21,3 +20,4 @@ box-shadow: 11.5108px 23.0216px 10.0719px rgba(0, 0, 0, 0.01), 6.47482px 12.9496
 border-radius: 15.8273px;
 
 }
+
