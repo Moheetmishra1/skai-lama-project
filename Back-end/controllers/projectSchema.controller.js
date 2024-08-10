@@ -50,17 +50,12 @@ const CreateFile = async (req,res,next)=>{
         let obj = await ProjectSchema.findById(pid)
        
 
-   let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]     
-
-
-        // objFile.fileList.push({fileName,descripton})
-        
+   let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]             
         
         if(obj){
             let index= obj.files.findIndex(a=> { return a.fileName===projectFileName}) 
             if(index>=0){
                 let date = new Date()
-                console.log(projectFileName,description,fileName);
                 
                  obj.files[index].fileList.push({fileName,description,date :`${date.getDay()} ${months[date.getMonth()]} ${date.getFullYear()} | ${date.getHours()}:${date.getMinutes()}`,projectFileName})
                 let d= await ProjectSchema.findByIdAndUpdate(pid, obj)
@@ -91,11 +86,9 @@ let GetAllFiles = async(req,res,next)=>{
     
     try{
         let {pid} = req.params;
-    console.log("emnter into getallfiles",req.params);
 
         let m = await ProjectSchema.findById(pid,{files:1,_id:0})
         let obj=m.files
-        console.log(obj, "data array");
         
         if(obj){
             let data =  obj.reduce((a,b,index)=>{
@@ -107,14 +100,13 @@ let GetAllFiles = async(req,res,next)=>{
         }
 
     }catch(err){
-        console.log(err);
+        next(err);
         
     }
 }
 
 
 const deleteFileofAFile = async(req,res,next)=>{
-    console.log("enter");
     
     try{
         let {id} = req.params; 
@@ -122,23 +114,19 @@ const deleteFileofAFile = async(req,res,next)=>{
 
         let obj = await ProjectSchema.findById(id,{files:1,_id:0})
         obj=obj.files
-        console.log(obj);
         
 
         if(obj){
             let ind = obj.findIndex(a=>a.fileName===projectFileName);
-            console.log(projectFileName, ind);
-            console.log("Before ",obj[ind].fileList.length);
+        
             
             
             obj[ind].fileList= obj[ind].fileList.filter((a,i)=>{
                 return i !==index
             })
-            console.log("after ",obj[ind].fileList.length);
 
                 let data = await ProjectSchema.findByIdAndUpdate(id,{$set:{files:obj}})
         // let filterProjectsFile = obj[ind].filter(a=>)
-        console.log(data , "this list is going top be deleted.");
         res.status(201).json({error:false,message:"delete"})
 
         }else{
@@ -159,11 +147,9 @@ let updateDescritpion = async(req,res,next)=>{
     try{
         let {id } = req.params
         let {   fileName,desc,projectfilename }= req.body;
-        console.log(fileName);
-        // res.status(201).json({error:false,message:""})
+      
         
         let {files} = await ProjectSchema.findById(id,{files:1,_id:0})
-        console.log(files, " is Array.");
         
 
         if(files){
@@ -177,7 +163,6 @@ let updateDescritpion = async(req,res,next)=>{
                         }
                 })
                 let data = await ProjectSchema.findByIdAndUpdate(id,{$set:{files}})
-                console.log(data ," is type");
                 res.status(201).json({error:false,message:"description is updated"})
                 
 

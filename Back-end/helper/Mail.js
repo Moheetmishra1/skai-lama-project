@@ -14,7 +14,7 @@ let subscription = async (email)=>{
         from: "moheetmishra.gaya@gmail.com",
         to: email,
         subject: "Account created.",
-        text: "Hi congratulation.Your account is successfully created.",
+        text: "Hi congratulation.Your account is successfully created on the_uploader wbsite.",
         html:`<h1>Dear ${email.split("@")[0]} </h1>`,
 
         attachments:[ {

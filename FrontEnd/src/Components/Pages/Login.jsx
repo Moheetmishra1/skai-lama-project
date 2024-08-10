@@ -54,9 +54,7 @@ function Login() {
     try {
       sessionStorage.clear();
       let { data } = await axios.post(
-        "http://localhost:4044/api/v1/login",
-        user
-      );
+        "http://localhost:4044/api/v1/login",user );
       if (data.error) {
         return (loginError.current.innerHTML = data.message);
       } else {
