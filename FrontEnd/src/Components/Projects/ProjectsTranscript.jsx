@@ -28,7 +28,7 @@ console.log(pDetails);
   const uploadDesc = async ()=>{
 
     try{
-       let {data} = await axios.post(`http://localhost:4044/api/v1/updatedescription/${pDetails._id}`,{
+       let {data} = await axios.post(`https://the-uploader.onrender.com/api/v1/updatedescription/${pDetails._id}`,{
        fileName: singleProjectFileList[index].fileName,desc,projectfilename },{
           headers:{
             Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`

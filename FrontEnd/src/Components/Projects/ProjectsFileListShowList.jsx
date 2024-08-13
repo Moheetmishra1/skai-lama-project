@@ -18,10 +18,10 @@ function ProjectsFileListShowList() {
 
         try{
           let {fileName,projectFileName}=a
-          console.log(a);
+          // console.log(a);
           
           
-            let {data} = await axios.post(`http://localhost:4044/api/v1/deletefileofafile/${pDetails._id}`,{fileName,projectFileName, index},{
+            let {data} = await axios.post(`https://the-uploader.onrender.com/api/v1/deletefileofafile/${pDetails._id}`,{fileName,projectFileName, index},{
               headers:{
                 Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`
 
@@ -31,10 +31,11 @@ function ProjectsFileListShowList() {
             
             if(!data.error){
               let arr= singleProjectFileList.filter((a,i)=>{
-                return i !==index
+                return a.fileName !== fileName
               })
-              arr.splice(index,1)
-              dispatch(uploadFileofFileList(arr))
+              // console.log(arr);
+              
+              dispatch(uploadFileofFileList([...arr]))
               
             }else{
               if(data.message==="jwt expired"){

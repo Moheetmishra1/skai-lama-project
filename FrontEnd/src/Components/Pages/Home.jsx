@@ -27,7 +27,7 @@ function Home() {
 
     let userProjectList = async()=>{
       try{
-          let {data}= await axios.get("http://localhost:4044/api/v1/userprojects",{
+          let {data}= await axios.get("https://the-uploader.onrender.com/api/v1/userprojects",{
             headers:{
               Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`
             }

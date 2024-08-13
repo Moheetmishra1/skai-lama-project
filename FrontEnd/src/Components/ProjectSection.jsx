@@ -16,7 +16,7 @@ function ProjectSection() {
 
   let getAllProjectFiles = async ()=>{
     try{
-        let {data } = await axios.get(`http://localhost:4044/api/v1/getuserproject/${projectname}`,{
+        let {data } = await axios.get(`https://the-uploader.onrender.com/api/v1/getuserproject/${projectname}`,{
           headers:{
             Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`
           }

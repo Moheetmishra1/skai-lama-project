@@ -26,7 +26,7 @@ function ProjectsCreateFile({projectCreateFileState,setPCF }) {
         }
 
         try{
-                let {data} = await axios.post(`http://localhost:4044/api/v1/createfile/${pDetails._id}`,{...fileObject,projectFileName:projectCreateFileState.fileName}
+                let {data} = await axios.post(`https://the-uploader.onrender.com/api/v1/createfile/${pDetails._id}`,{...fileObject,projectFileName:projectCreateFileState.fileName}
                     ,{
                     headers:{
                         Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`

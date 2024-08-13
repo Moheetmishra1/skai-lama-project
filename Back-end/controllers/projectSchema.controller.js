@@ -111,23 +111,21 @@ const deleteFileofAFile = async(req,res,next)=>{
     try{
         let {id} = req.params; 
         let {fileName,projectFileName,index} = req.body;
-
+            console.log({fileName,projectFileName,index} );
+            
         let obj = await ProjectSchema.findById(id,{files:1,_id:0})
         obj=obj.files
         
 
         if(obj){
             let ind = obj.findIndex(a=>a.fileName===projectFileName);
-        
-            
-            
+          
             obj[ind].fileList= obj[ind].fileList.filter((a,i)=>{
-                return i !==index
+                return a.fileName !=fileName
             })
 
-                let data = await ProjectSchema.findByIdAndUpdate(id,{$set:{files:obj}})
-        // let filterProjectsFile = obj[ind].filter(a=>)
-        res.status(201).json({error:false,message:"delete"})
+             await ProjectSchema.findByIdAndUpdate(id,{$set:{files:obj}})
+        res.status(201).json({error:false,message:"deleted"})
 
         }else{
         res.status(201).json({error:true,message:"project is empty"})

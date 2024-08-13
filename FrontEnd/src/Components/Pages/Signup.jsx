@@ -95,7 +95,7 @@ function Signup() {
       console.log("Image is sending ", image);
       
       let user2 = { ...user, image: image };
-      let { data } = await axios.post("http://localhost:4044/api/v1/signup", e.target,{
+      let { data } = await axios.post("https://the-uploader.onrender.com/api/v1/signup", e.target,{
         enctype:"multipart/form-data"
       });
       if (data.error) {

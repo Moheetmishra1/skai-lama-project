@@ -20,7 +20,7 @@ function CreateAccount({vale,updateProject,displaytList}) {
     let sentProject= async (e)=>{
         e.preventDefault();
         try{
-            let {data} = await axios.post("http://localhost:4044/api/v1/uploadproject",{projectName},
+            let {data} = await axios.post("https://the-uploader.onrender.com/api/v1/uploadproject",{projectName},
                 {
                     headers: {
                       Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`,

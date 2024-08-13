@@ -54,7 +54,7 @@ function Login() {
     try {
       sessionStorage.clear();
       let { data } = await axios.post(
-        "http://localhost:4044/api/v1/login",user );
+        "https://the-uploader.onrender.com/api/v1/login",user );
       if (data.error) {
         return (loginError.current.innerHTML = data.message);
       } else {
@@ -85,7 +85,7 @@ function Login() {
     try {
       console.log(session, " session is");
       let { data } = await axios.get(
-        "http://localhost:4044/api/v1/refreshlogin",
+        "https://the-uploader.onrender.com/api/v1/refreshlogin",
         {
           headers: {
             Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`,

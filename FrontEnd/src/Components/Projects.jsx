@@ -22,7 +22,7 @@ function Projects() {
   let getAllfiles = async()=>{
     try{
 
-      let {data } = await axios.get(`http://localhost:4044/api/v1/getallfiles/${pDetails._id}`,{
+      let {data } = await axios.get(`https://the-uploader.onrender.com/api/v1/getallfiles/${pDetails._id}`,{
         headers:{
           Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token"))}`
         }
