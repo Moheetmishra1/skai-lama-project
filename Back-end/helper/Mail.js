@@ -4,7 +4,7 @@ let transport = createTransport({
     service:"gmail",
     auth:{
         user:"moheetmishra.gaya@gmail.com",
-        pass:"pattwzbygxyptadw"
+        pass:"pattwzbygxw"
     }
 })
 
